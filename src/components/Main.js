@@ -6,7 +6,7 @@ import Coding from "../lottie/coding.json";
 import SocialMedia from "./SocialMedia";
 import { infoService } from "../service/GetInfo";
 import Type from "./Type";
-const Hero = () => {
+const Main = () => {
   const [name, setName] = useState();
   useEffect(() => {
     infoService
@@ -80,4 +80,4 @@ const HeroStyled = styled.section`
   }
 `;
 
-export default Hero;
+export default Main;

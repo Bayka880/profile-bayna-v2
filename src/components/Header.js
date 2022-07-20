@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ToggleMode from "./ToggleMode";
 import { infoService } from "../service/GetInfo";
 const Header = () => {
@@ -16,10 +16,10 @@ const Header = () => {
     <HeaderStyle>
       <div className="container">
         <div className="header-content">
-          <Link to="/">{name && name.name}</Link>
-          <Link to="/about">About me</Link>
-          <Link to="/experience">Experience</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/">{name && name.name}</NavLink>
+          <NavLink to="/about">About me</NavLink>
+          <NavLink to="/experience">Experience</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
           <ToggleMode />
         </div>
       </div>

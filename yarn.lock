@@ -9902,6 +9902,11 @@
     "@types/node" "*"
     "acorn" "^7.1.0"
 
+"routes@^2.1.0":
+  "integrity" "sha512-ipKiJOw1LUmlfusmWq0XWGJRVT4FdB8ymKvct2OpjN6lXYQa7W/tJjD75W7bzYghdfV1eObdM3Gh7vuVwttPcA=="
+  "resolved" "https://registry.npmjs.org/routes/-/routes-2.1.0.tgz"
+  "version" "2.1.0"
+
 "rsvp@^4.8.4":
   "integrity" "sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA=="
   "resolved" "https://registry.npmjs.org/rsvp/-/rsvp-4.8.5.tgz"
