@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Greeting.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import { greeting } from "../../portfolio";
+
 import { Fade } from "react-reveal";
 import { useHistory } from "react-router-dom";
 import FeelingProud from "./FeelingProud";
 import { style } from "glamor";
 import { infoService } from "../../service/Getinfo";
 export default function Greeting(props) {
-  const [name, setName] = useState();
   const [desc, setDesc] = useState();
   console.log(desc);
   useEffect(() => {
-    infoService
-      .getName()
-      .then((res) => res.json())
-      .then((data) => setName(data));
     infoService
       .getDiscreption()
       .then((res) => res.json())
@@ -37,7 +32,13 @@ export default function Greeting(props) {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
-              <h1 className="greeting-text">Hello 👋.</h1>
+              <h1 className="greeting-text">
+                Hello{" "}
+                <span role="img" aria-label="jsx-a11y/accessible-emoji">
+                  👋
+                </span>
+                .
+              </h1>
               <p
                 className="greeting-text-p subTitle"
                 style={{ color: theme.secondaryText }}

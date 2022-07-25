@@ -22,7 +22,7 @@ function SkillSection(props) {
       {skills.data.map((skill, index) => {
         if (index % 2 === 0) {
           return (
-            <div className="skills-main-div">
+            <div className="skills-main-div" key={index}>
               <Fade left duration={2000}>
                 <div className="skills-image-div">
                   <GetSkillSvg fileName={skill.fileName} theme={theme} />
@@ -41,12 +41,24 @@ function SkillSection(props) {
                 <Fade right duration={2000}>
                   <div className="subTitle skills-text">
                     <div>
-                      <span role="img"> ⚡ </span>Building responsive website
-                      front end using ReactJS
+                      <span
+                        role="img"
+                        aria-describedby="jsx-a11y/accessible-emoji"
+                      >
+                        {" "}
+                        ⚡{" "}
+                      </span>
+                      Building responsive website front end using ReactJS
                     </div>
                     <div>
-                      <span role="img"> ⚡ </span>Creating application backend
-                      in Node, Express, Fast-API
+                      <span
+                        role="img"
+                        aria-describedby="jsx-a11y/accessible-emoji"
+                      >
+                        {" "}
+                        ⚡{" "}
+                      </span>
+                      Creating application backend in Node, Express, Fast-API
                     </div>
                   </div>
                 </Fade>
@@ -55,7 +67,7 @@ function SkillSection(props) {
           );
         } else {
           return (
-            <div className="skills-main-div">
+            <div className="skills-main-div" key={index}>
               <div className="skills-text-div">
                 <Fade left duration={1000}>
                   <h1 className="skills-heading" style={{ color: theme.text }}>
@@ -68,11 +80,24 @@ function SkillSection(props) {
                 <Fade left duration={2000}>
                   <div className="subTitle skills-text">
                     <div>
-                      <span role="img"> ⚡ </span>Hosting Front-end and Back-end
-                      with Heroku , AWS
+                      <span
+                        role="img"
+                        aria-describedby="jsx-a11y/accessible-emoji"
+                      >
+                        {" "}
+                        ⚡{" "}
+                      </span>
+                      Hosting Front-end and Back-end with Heroku , AWS
                     </div>
                     <div>
-                      <span role="img"> ⚡ </span>Deploying front-end in Netlify
+                      <span
+                        role="img"
+                        aria-describedby="jsx-a11y/accessible-emoji"
+                      >
+                        {" "}
+                        ⚡{" "}
+                      </span>
+                      Deploying front-end in Netlify
                     </div>
                   </div>
                 </Fade>
