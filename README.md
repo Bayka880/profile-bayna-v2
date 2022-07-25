@@ -1,46 +1,31 @@
-# Said MOUNAIM
+# Portfolio
 
+## Demo
 <p align="center">
-  <kbd>
-    <img src="https://i.ibb.co/N9mXnwr/sm.png"></img>
-  </kbd>
+  <img src="/images/portfolio1.gif")
 </p>
 
-### To view a live example, **[click here]()**.
+<h2> How To Use </h2>
 
-## Getting Started
+- Clone this repository (or fork, then clone your fork :) )
+- Run `npm i`
+- Check it out using `npm start`
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
+## Technologies used 🛠️
 
-```
-node@v10.16.0 or higher
-npm@6.9.0 or higher
-git@2.17.1 or higher
-```
+- [React](https://reactjs.org/)
+- [graphql](https://graphql.org/)
+- [apollo-boost](https://www.apollographql.com/docs/react/get-started/)
+- [baseui](https://github.com/uber/baseweb)
+- [react-reveal](https://www.react-reveal.com/)
+- [styled-components](https://styled-components.com/)
 
-## How To Use
+## illustrations 🍥
 
-From your command line, clone and run SMPortfolio:
+- [UnDraw](https://undraw.co/illustrations)
 
-```bash
-# Clone this repository
-$ git clone https://github.com/saidMounaim/SMPortfolio.git
+## References
 
-# Go into the repository
-$ cd SMPortfolio
-
-# Install dependencies
-$ npm install
-
-#Start's development server
-$ npm start
-```
-
-## Technologies Used
-
--   [React](https://reactjs.org/)
--   [styled-components](https://styled-components.com/)
--   [react-reveal](https://www.react-reveal.com/)
--   [react-lottie](https://www.npmjs.com/package/react-lottie)
+Based on https://github.com/ashutosh1919/masterPortfolio/ and https://github.com/saadpasta/developerFolio
+Illustrations: https://undraw.co/

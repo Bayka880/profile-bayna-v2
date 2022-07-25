@@ -1,26 +1,32 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import GlobalStyles from "./components/GlobalStyles";
-import Fade from "react-reveal/Fade";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import About from "./components/About";
-const App = () => {
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Main from "./containers/Main";
+import { ThemeProvider } from "styled-components";
+import { themes } from "./theme";
+import { GlobalStyles } from "./global";
+import { settings } from "./portfolio";
+import ReactGA from "react-ga";
+
+function App() {
+  useEffect(() => {
+    if (settings.googleTrackingID) {
+      ReactGA.initialize(settings.googleTrackingID, {
+        testMode: process.env.NODE_ENV === "test",
+      });
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  }, []);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   return (
-    <>
-      <Header />
-      <Router>
-        <div className="App">
-          <GlobalStyles />
-          <Fade top duration={1000} distance="40px">
-            <Route path="/">
-              <Main />
-            </Route>
-            <Route path="/about" element={<About />}></Route>
-          </Fade>
+    <ThemeProvider theme={themes[theme]}>
+      <>
+        <GlobalStyles />
+        <div>
+          <Main theme={themes[theme]} setTheme={setTheme} />
         </div>
-      </Router>
-    </>
+      </>
+    </ThemeProvider>
   );
-};
+}
 
 export default App;
